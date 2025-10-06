@@ -8,56 +8,89 @@
     <title>BiSoKoBa - Portfolio</title>
 </head>
 <body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <h2>BiSoKoBa</h2>
+        </div>
+    </div>
+
     <header>
         <a href="#home" class="logo">BiSoKoBa</a>
         <nav>
             <a href="#home" class="active">Home</a>
             <a href="#services">Services</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="theme-toggle" id="themeToggle">
+            <i class="fas fa-palette"></i>
+        </div>
     </header>
 
-    <section id="home" class="home">
-        <div class="home-img">
-            <img src="my-photo.jpg" alt="BiSoKoBa">
-        </div>
+    <div id="particles-js"></div>
+
+    <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, I am <span class="highlight">BiSoKoBa</span></h1>
-            <h3 class="typing-text">I'm a <span>Developer</span></h3>
-            <p>If you pay me good amount of money I will make you your Website</p>
+            <h1>Hi, I am <span class="name">BiSoKoBa</span></h1>
+            <h3 class="typing-text">I'm a <span class="typed-word">Developer</span></h3>
+            <p>Crafting exceptional digital experiences through clean code and creative solutions</p>
+            <div class="stats">
+                <div class="stat-box">
+                    <h4><span class="counter" data-target="50">0</span>+</h4>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-box">
+                    <h4><span class="counter" data-target="30">0</span>+</h4>
+                    <p>Clients</p>
+                </div>
+                <div class="stat-box">
+                    <h4><span class="counter" data-target="5">0</span>+</h4>
+                    <p>Years</p>
+                </div>
+            </div>
             <div class="social-icons">
                 <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#contact" class="btn">Contact me</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+        <div class="home-img">
+            <div class="img-wrapper">
+                <img src="my-photo.jpg" alt="BiSoKoBa Profile">
+            </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2 class="section-title">My <span class="highlight">Services</span></h2>
+    <section class="services" id="services">
+        <h2 class="section-title">My <span>Services</span></h2>
         <div class="services-container">
             <div class="service-box">
-                <i class="fa-solid fa-code"></i>
+                <i class="fas fa-code"></i>
                 <h3>Web Development</h3>
-                <p>Creating modern, responsive websites with clean code and great performance.</p>
+                <p>Building responsive and modern websites with the latest technologies</p>
             </div>
             <div class="service-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>UI/UX Design</h3>
-                <p>Designing beautiful and intuitive user interfaces that users love.</p>
-            </div>
-            <div class="service-box">
-                <i class="fa-solid fa-mobile-screen-button"></i>
+                <i class="fas fa-mobile-alt"></i>
                 <h3>Mobile Apps</h3>
-                <p>Building cross-platform mobile applications for iOS and Android.</p>
+                <p>Creating seamless mobile experiences for iOS and Android</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive interfaces that users love to interact with</p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+    <section class="skills" id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
         <div class="skills-container">
             <div class="skill-box">
                 <div class="skill-info">
@@ -98,36 +131,263 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+    <section class="projects" id="projects">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-commerce Platform">
+                    <div class="project-overlay">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack online shopping experience</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fitness Tracker">
+                    <div class="project-overlay">
+                        <h3>Fitness Tracker App</h3>
+                        <p>Health and workout monitoring</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Brand Identity">
+                    <div class="project-overlay">
+                        <h3>Brand Identity Design</h3>
+                        <p>Complete branding package</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dashboard">
+                    <div class="project-overlay">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time data visualization</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Chart.js</span>
+                            <span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chat App">
+                    <div class="project-overlay">
+                        <h3>Real-time Chat App</h3>
+                        <p>Instant messaging platform</p>
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800" alt="UI Kit">
+                    <div class="project-overlay">
+                        <h3>Modern UI Kit</h3>
+                        <p>Reusable component library</p>
+                        <div class="project-tags">
+                            <span>Sketch</span>
+                            <span>Design System</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Client <span>Reviews</span></h2>
+        <div class="testimonials-container">
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Outstanding work! BiSoKoBa delivered a stunning website that exceeded all expectations. Professional, creative, and highly skilled.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>CEO, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Incredible attention to detail and amazing communication throughout the project. The final product was perfect and delivered on time!</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>Founder, DesignHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Best developer I've worked with! Creative solutions, clean code, and always goes above and beyond. Highly recommend!</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Client">
+                            <div>
+                                <h4>Emily Rodriguez</h4>
+                                <span>Marketing Director, BrandCo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-navigation">
+                <button class="testimonial-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots"></div>
+                <button class="testimonial-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
         <div class="contact-container">
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                 <input type="hidden" name="access_key" value="ed532ad7-03c8-4eef-b71f-5f95982aae09">
-
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
-
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
                 </div>
-
                 <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 BiSoKoBa. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BiSoKoBa</h3>
+                <p>Creating digital excellence, one project at a time.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> hello@bisokoba.dev</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-location-dot"></i> San Francisco, CA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BiSoKoBa. All rights reserved.</p>
+            <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+        </div>
     </footer>
 
+    <div class="theme-modal" id="themeModal">
+        <div class="theme-modal-content">
+            <h3>Choose Your Theme</h3>
+            <div class="theme-options">
+                <div class="theme-option" data-theme="default">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #000 0%, #fff 100%)"></div>
+                    <span>Classic B&W</span>
+                </div>
+                <div class="theme-option" data-theme="blue">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #000428 0%, #004e92 100%)"></div>
+                    <span>Ocean Blue</span>
+                </div>
+                <div class="theme-option" data-theme="green">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%)"></div>
+                    <span>Forest Green</span>
+                </div>
+                <div class="theme-option" data-theme="red">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #1a0000 0%, #8b0000 100%)"></div>
+                    <span>Crimson Red</span>
+                </div>
+                <div class="theme-option" data-theme="gold">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #1a1a00 0%, #d4af37 100%)"></div>
+                    <span>Golden Luxury</span>
+                </div>
+                <div class="theme-option" data-theme="cyber">
+                    <div class="theme-preview" style="background: linear-gradient(135deg, #000 0%, #00ffff 100%)"></div>
+                    <span>Cyberpunk</span>
+                </div>
+            </div>
+            <button class="close-modal" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
